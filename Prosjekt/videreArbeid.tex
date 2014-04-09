@@ -1,0 +1,55 @@
+\section{Videre arbeid}
+
+Da tid og ressurser har vært begrenset i prosjektet, har vi identifisert en del arbeid som bør gjøres i fremtiden for å forbedre produktet, men som vi ikke har hatt mulighet til å gjennomføre. Dette arbeidet dreier seg om funksjonalitet som vil forbedre koblingsagenten. Vi har også gitt et estimat på hvor lang tid dette videre arbeidet vil ta.
+
+{\bf Legge til flere bidrag eller ønsker}
+
+Slik som prototypen er nå så har man bare muligheten til å velge enten gave, frivillighet eller kompetanse. Dette var bevisst fra vår side da vi ønsket å lage prototypen så enkel som mulig på grunn av den begrensede tiden vi hadde på prosjektet. Det var forøvrig koordinert med Marianne. Likevel vil en utvidelse av funksjonalitet for at brukeren skal kunne ha muligheten for å velge flere enn ett alternativ være ønskelig. Fra den dataen vi har fått så er det noen som ønsker å gi mer enn én ting og det blir da en begrensning i prototypen at man bare kan velge ett alternativ. På en annen side så kan det være en god måte å ``tvinge” brukerne å tenke over hva de skal velge å gi/motta slik at det kanskje blir mer gjennomtenkt. Videre arbeid i denne forbindelse vil derfor belage seg på endring av registreringsskjemaet for ønsker og behandling av databasetabeller.
+
+{\bf Forbedret koblingsalgoritme}
+
+Slik systemet er nå, skjer matchingen av brukere på en meget bestemt måte: Enten så er det en 100\% match eller ikke. Det vil si at dersom to brukere ikke matcher helt konkret på to ``ønsker” så vil de ikke tolkes som en mulig match av systemet. Videre arbeid på koblingsalgoritmen vil da belage seg på å utvikle støtte for en prosentvis match, som sorteres i en prioritert liste over de mest matchende brukerne. På denne måten vil systemet kunne skille mellom noenlunde matchende brukere, godt matchende brukere osv, slik at søk på match blir inkluderende og ikke begrensende. Ved å implementere en slik algoritme, unngår man problemet med at brukere som muligens matcher ikke engang blir vurdert.
+
+Det bør nevnes at det også er mulighet for å utvikle svært avanserte koblingsalgoritmer som f.eks. baseres seg på informasjonsgjenkjenning. Et slikt alternativ vil kunne medføre en svært god løsning, men vil kreve mye mer ressurser enn vår løsning.
+
+{\bf Etablere fast bruker}
+
+Per dags dato er det ikke implementert noen loginfunksjon som gir muligheten for at brukere kan logge inn og endre på opplysninger og se hvem de er koblet med i etterkant av registreringen. Dette er mye av årsaken til at matchingen kun foregår på én bestemt bruker. I backenden er det laget brukerobjekter som kan benyttes for å holde på all informasjon om brukeren i en sesjon. Det som gjenstår er egentlig bare å lage et brukergrensesnitt for å kunne f.eks. endre informasjon om brukeren, se historikk på hvem man har koblet med, og se nåværende kobling samt info om den organisasjonen man er koblet med. Videre arbeid vil da belage seg på å implementere det overnevnte, samt grunnleggende sesjonshåndtering.
+
+{\bf Varsel dersom verdier ikke er fylt inn korrekt}
+
+For brukervennlighet så er det viktig at brukeren får informasjon om hvordan man eksempelvis skal fylle ut skjemaer, hvilke verdier som er tillatt og om feltene er fylt ut riktig. Vi har ikke lagt så mye vekt på dette da vi i hovedsak skulle implementere en koblingsagent som kunne koble to brukere sammen. Når det er sagt så er det et viktig punkt som alle tjenester burde inneholde fordi brukeren får konkret og rask respons på om felter er fylt ut riktig eller feil og om noen verdier mangler.
+
+{\bf Automatisk generert e-mail til mottaker dersom funnet av giver/mottaker}
+
+Etter litt diskusjon i gruppa fant vi ut at det kunne vært praktisk med funksjonalitet for å sende ut e-mail når man har blitt koblet med noen slik at begge parter av koblingen er klar over  at de er blitt koblet sammen. Det samme gjelder om man har situasjoner der man ikke finner noen passende giver/mottaker. Man burde da få en mail når det har registrert seg en giver/mottaker som matcher brukerens ønsker.
+
+Det å implementere mailfunksjonalitet burde ikke ta alt for mye tid, systemet finner alle potensielle matcher når en ny bruker legges til. Det systemet da må gjøre, er å sende en mail til de brukerene som passer med disse kriteriene, slik at begge parter vet at det er en god potensiell match klar. Siden vi har laget funksjonalitet for at giver/mottaker kan velge sin match så burde mailfunksjonaliteten som går på å sende ut mail når det registrerer seg en potensiell match, være et valg man kan abonnere på.
+
+{\bf Utvidelse av antall kategorier}
+
+Det bør foretas en vurdering i forhold til antall kategorier brukeren kan velge mellom. I dag er det tre-fire kategorier som kan velges. Få valgmuligheter tvinger brukeren til å bli mer bevisst i forhold til hva de vil bidra med eller motta. Samtidig gir få valgmuligheter flere potensielle matcher som igjen øker brukerens valgfrihet med tanke på ønsket samarbeidsbedrift. Dersom man derimot øker antall kategorier, blir brukeren gitt større frihet i innfyllingsprosessen, men lista over potensielle matcher vil bli kortere da alternativene er mer spesifikke. Det kan være lurt å analysere mer tidligere data og vurdere flere kategorier man kan definere for å forbedre koblingsprosessen.
+
+{\bf Videreutvikling av kildekode}
+
+Grunnet dårlig tid ble funksjonalitet vektlagt under skriving av kildekoden. Dette har ført til at noe av kildekoden kan være noe vanskelig å videreutvikle. Videre arbeid bør derfor belage seg på god planlegging og strukturering av både ny og gammel kildekode. Denne prototypen er likevel bare et forslag til en løsning, og god kode og kodestruktur er ikke vektlagt. Det er derfor noe omdiskutert hvor enkelt det er å videreutvikle denne prototypen. Det kan fort være mer hensiktsmessing å starte et nytt prosjekt som arver ideer og konsepter fra prototypen enn å satse på å jobbe videre med prototypekoden.
+
+\subsection{Estimering av tid til videre arbeid}
+
+Denne seksjonen beskriver kort alle oppgavene under ``Videre Arbeid” og estimerer tidsforbruk i antall arbeidstimer som trengs for å gjennomføre oppgaven.
+
+\begin{table}[H]
+    \begin{tabular}{|p{4cm} | p{6cm} | p{4cm} |}
+    \hline
+    {\bf Oppgave}                               & {\bf Hva må gjøres?}                                                                                                                                                                                                    & {\bf Tid}                                                                        \\ \hline
+    Legge til flere bidrag og ønsker      & Gitt at du har etablert faste brukere, vil dette involvere en ny side og en SQL spørring.                                                                                                                         & Estimert til 10 timer                                                      \\ \hline
+    Forbedret koblingsalgoritme           & Matchingalgoritmen må oppdateres til å støtte prosentvis matching. Resultatet skal puttes i en prioritert liste.                                                                                                  & Estimert til 50-200 timer alt etter hvor avansert den er                   \\ \hline
+    Etablere fast bruker                  & Lage en login-side, oppdatere databasen, lage profilside og sette opp sesjoner.                                                                                                                                   & Estimert til 20 timer                                                      \\ \hline
+    Automatisk generert e-mail            & Må utvikles et skript som sjekker om det er flere koblinger som passer.                                                                                                                                           & Estimert til 15 timer                                                      \\ \hline
+    Utvidelse av antall kategorier        & Å lage kategoriene er ikke en stor jobb, men å finne gode kategorier som gir en balanse mellom antall koblinger og kvaliteten på koblingen kan være vanskelig. Dette kan eventuelt gjøres med spørreundersøkelse. & Estimert til 50-150 timer                                                  \\ \hline
+    Varsel dersom verdier ikke er fylt ut & Lage et javascript som forteller deg om alle felter er fylt inn.                                                                                                                                                  & Estimert til 2 timer                                                       \\ \hline
+    {\bf Til sammen:}                           & ~                                                                                                                                                                                                                 & {\bf Minimum 150 timer (avhenger av hvor avansert koblingsalgoritmen skal være)} \\ \hline
+    \end{tabular}
+\end{table}
+
+Tabellen indikerer at det estimeres minimum 150 arbeidstimer for å gjennomføre det videre arbeidet av prototypen. Dette tallet vil selvsagt avhenge av hvor avansert man ønsker koblingsalgoritmen, men vi mener at vi med prototypen har vist at den ikke trenger å være veldig avansert for å fungere godt.
