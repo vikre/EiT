@@ -1,0 +1,58 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{float}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{ifpdf}
+\usepackage{url}
+\usepackage{xtab}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage[parfill]{parskip}
+\usepackage{alltt}
+\usepackage{pdfpages}
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
+
+\newcommand{\comment}[1]{} \comment{This is a block comment wrapped in curly
+brackets}
+\begin{document}
+
+\input{forside}
+\chapter{Sammendrag}
+\input{Sammendrag}
+\tableofcontents
+\chapter{Innledning}
+\input{Innledning}
+
+\chapter{Rammeverk for gruppearbeid}
+\input{Rammeverk}
+
+\chapter{Gruppedynamikk}
+\input{Gruppedynamikk}
+
+\chapter{Personlig utvikling i et læringsperspektiv}
+\input{Personlig_utvikling}
+
+\chapter{Evaluering og oppsummering}
+\input{evaluering}
+
+\newpage
+\appendix
+\addcontentsline{toc}{chapter}{Appendix}
+\chapter{Samarbeidsavtale}
+\input{samarbeidsavtale}
+
+\bibliographystyle{plain}
+\bibliography{bibl}
+\end{document}

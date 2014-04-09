@@ -1,0 +1,9 @@
+*.aux
+*.lof
+*.log
+*.lot
+Rapport.pdf
+*.toc
+*.tex~
+/out
+/node_modules
