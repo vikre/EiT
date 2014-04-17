@@ -1,4 +1,4 @@
-build:
+build: out lint
 	pdflatex --output-directory out/ Rapport.tex
 	bibtex out/Rapport.aux
 	pdflatex --output-directory out/ Rapport.tex
@@ -11,10 +11,6 @@ clean:
 
 open: build
 	@open out/Rapport.pdf
-
-lint:
-	@chktex Rapport.tex
-	@node node_modules/mllc/cli.js '**/*.tex'
 
 setup:
 	npm install mllc
