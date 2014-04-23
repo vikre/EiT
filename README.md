@@ -3,6 +3,8 @@ EiT
 
 ### TODO
 
+* [ ] Fikse table- og figurliste
+
 #### Prosjektrapport
 
 * [ ] Fikse referanser til figurer
