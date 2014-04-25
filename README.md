@@ -4,6 +4,7 @@ EiT
 ### TODO
 
 * [ ] Fikse table- og figurliste
+* [ ] Må fikse sidenummer (forside skal ikke være nummer 1 osv)
 
 #### Prosjektrapport
 
