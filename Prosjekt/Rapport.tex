@@ -15,7 +15,7 @@
 \usepackage{geometry}
 \usepackage{longtable}
 \usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
+\usepackage[norsk]{babel}
 \usepackage[parfill]{parskip}
 \usepackage{alltt}
 \usepackage{pdfpages}
@@ -27,7 +27,9 @@
 \newcommand{\comment}[1]{} \comment{This is a block comment wrapped in curly
 brackets}
 \begin{document}
+\pagenumbering{blob}
 \input{forside}
+\pagenumbering{Roman}
 \input{forord}
 \input{sammendrag}
 \input{begreper}
@@ -38,7 +40,7 @@ brackets}
 \listoftables
 \listoffigures
 \newpage
-
+\pagenumbering{arabic}
 \chapter{Innledning}
 \input{Innledning}
 
