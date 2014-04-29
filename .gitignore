@@ -2,3 +2,11 @@
 *.gz
 
 *.out
+
+*.gz(busy)
+
+*.bbl
+
+*.blg
+
+*.log
