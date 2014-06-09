@@ -3,18 +3,18 @@ EiT
 
 ### TODO
 
-* [ ] Fikse table- og figurliste
-* [ ] Må fikse sidenummer (forside skal ikke være nummer 1 osv)
+* [ x] Fikse table- og figurliste
+* [ x] Maa fikse sidenummer (forside skal ikke vaere nummer 1 osv)
 
 #### Prosjektrapport
 
-* [ ] Fikse referanser til figurer
-* [ ] Fikse referanser
-* [ ] Se over om noe mangler og formatering av kapitler
-* [ ] Se over at alle bilder pÃ¥ koblingsagenten er riktige
+* [ x] Fikse referanser til figurer
+* [ x] Fikse referanser
+* [ x] Se over om noe mangler og formatering av kapitler
+* [ x] Se over at alle bilder pÃ¥ koblingsagenten er riktige
 
 #### Prosessrapport
 
-* [ ] Fikse referanser til figurer
-* [ ] Se over at referansene i teksten er sitert riktig
-* [ ] Se over om noe mangler og formatering av kapitler
+* [ x] Fikse referanser til figurer
+* [ x] Se over at referansene i teksten er sitert riktig
+* [ x] Se over om noe mangler og formatering av kapitler
